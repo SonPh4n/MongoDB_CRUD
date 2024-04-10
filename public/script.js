@@ -1,7 +1,7 @@
 const getJSON = async () => {
     try {
-        // let response = await fetch("http://localhost:3001/api/crafts");
-        let response = await fetch("https://mongodb-crud-eift.onrender.com/api/crafts"); // Alternative URL needed for new render
+        let response = await fetch("http://localhost:3001/api/crafts");
+        // let response = await fetch("https://mongodb-crud-eift.onrender.com/api/crafts"); // Alternative URL needed for new render
         return await response.json();
     } catch (error) {
         console.log("error retrieving json");
@@ -106,6 +106,7 @@ const resetForm = () => {
     form.reset();
     document.getElementById("moresupplies").innerHTML = "";
     document.getElementById("img-prev").src="";
+    form._id.value = "";
 };
 
 const showCrafts = async () => {

@@ -37,17 +37,11 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-// const upload = multer({ dest: __dirname + "/public/images"});
-
 
 app.get('/',(req, res)=>{
     res.sendFile(__dirname + "/index.html");
 });
 
-
-// app.get("/api/crafts", (req, res)=> {
-//     getCrafts(res);
-// });
 
 app.get("/api/crafts", async (req, res) => {
   try {
