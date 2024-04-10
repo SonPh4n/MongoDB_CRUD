@@ -1,7 +1,7 @@
 const getJSON = async () => {
     try {
         // let response = await fetch("http://localhost:3001/api/crafts");
-        let response = await fetch("https://server-edit-delete-g3jv.onrender.com/api/crafts"); // Alternative URL needed for new render
+        let response = await fetch("https://mongodb-crud-eift.onrender.com/api/crafts"); // Alternative URL needed for new render
         return await response.json();
     } catch (error) {
         console.log("error retrieving json");
@@ -19,7 +19,7 @@ const populateEditForm = (craft) => {
     populateSupplies(craft.supplies); 
 
     const imgPreview = document.getElementById("img-prev");
-    imgPreview.src = "images/" + craft.image;
+    imgPreview.src = "/images/" + craft.image;
 };
 
 
@@ -132,7 +132,7 @@ const showCrafts = async () => {
             let column = columns[index % 4];
             let img = document.createElement("img");
             
-            img.src = "images/" + craft.image;
+            img.src = "/images/" + craft.image;
             img.onclick = () => openModalWithCraft(craft);
             column.append(img);
         }
