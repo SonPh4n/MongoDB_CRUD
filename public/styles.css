@@ -1,0 +1,149 @@
+
+h1{
+    color:rgb(175, 0, 250);
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+body {
+margin: 0;
+font-family: Arial;
+background-color: bisque;
+}
+
+#add-link {
+  font-size: 25px;
+  text-decoration: none; 
+  color: rgb(175, 0, 250); 
+  padding: 5px; 
+  border-radius: 25%; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+#add-link:hover {
+  background-color: rgb(175, 0, 250); 
+  color: white; 
+}
+
+header {
+text-align: center;
+padding: 32px;
+}
+
+.row {
+display: flex;
+flex-wrap: wrap;
+padding: 0 4px;
+}
+
+#column1 img {
+  max-width: 100%; 
+  max-height: 600px; 
+  width: auto; 
+  height: auto; 
+}
+
+
+.column{
+flex: 25%;
+max-width: 25%;
+padding: 0 4px;
+}
+
+.column img {
+margin-top: 8px;
+vertical-align: middle;
+width: 100%;
+}
+
+#craft-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body h1{
+    text-align: center;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  .modal-content img{
+    width: 100%;
+    padding: 20px;
+  }
+
+  form img{
+    max-width: 100%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.modal-flex-container {
+    display: flex;
+    
+}
+
+.modal-img-container {
+    flex: 1;
+    min-width: 200px;
+}
+
+.modal-text-container {
+    flex: 2;
+    min-width: 300px;
+}
+
+.flex-container{
+  display: flex;
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }

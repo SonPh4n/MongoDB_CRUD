@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Buy and Sell Crafts</h1>
+            <p>
+                <a href="#" id="add-link">+</a>
+            </p>
+        </header>
+        
+        <!-- The Add Craft Modal -->
+        <div id="add-edit-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form id="add-edit-form">
+                    <div class="flex-container">
+                        <div id = "column1">
+                            <img src="https://place-hold.it/200x300" id="img-prev"/> <br>
+                            <label for="image">Upload Image:</label> 
+                            <input type="file" id="image" name="image" accept="image/*" />
+                        </div>
+
+                        <div id ="column2">
+                            <h2>Make Changes to Your Craft</h2>
+                            <input type="hidden" id="_id" name="_id">
+                            <label for="craftName">Craft Name:</label>
+                            <input type="text" id="craftName" name="name" required/><br><br>
+                            <label for="craftDescription">Description:</label>
+                            <textarea id="craftDescription" name="description" required></textarea><br><br>
+                            <label for="supplies">Supplies:</label>
+                            <input type="button" id="addSupplyButton" value="Add Supply"/><br><br>
+                            <div id="moresupplies"></div>
+
+
+                            <input type="button" id="cancelbutton" value="Cancel">
+
+                            <input type="submit" value="Save Craft">
+                        </div>
+                    </div>
+                </form> 
+            </div>
+        </div>
+
+        <div id="craft-list">
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <p></p>
+            </div>
+        </div>
+
+        <script src ="script.js"></script>
+
+    </body>
+
+
+
+
+</html>
