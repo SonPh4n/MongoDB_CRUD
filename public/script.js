@@ -141,10 +141,21 @@ const showCrafts = async () => {
     
 };
 
+function setFormMode(isEditMode) {
+    const imageInput = document.getElementById('image');
+    if (isEditMode) {
+        imageInput.removeAttribute('required');
+    } else {
+        imageInput.setAttribute('required', '');
+    }
+}
+
+
 // Function to open the craft details modal
 function openModalWithCraft(craft) {
     var modal = document.getElementById("myModal");
     modal.style.display = "block";
+    setFormMode(true);
      
     var modalContent = modal.querySelector(".modal-content");
     modalContent.innerHTML = '<span class="close">&times;</span>'; //simplified stack clear
@@ -218,6 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("add-link").addEventListener("click", function(event) {
         event.preventDefault();
         resetForm(); 
+        setFormMode(false); 
         document.getElementById("add-edit-modal").style.display = "block";
     });
 
